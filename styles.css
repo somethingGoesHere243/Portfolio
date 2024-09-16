@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+  
+    --main-background: #3f4045;
+    --navbar-background: #02111b;
+    --text-color: #fcfcfc;
+    --active-text-color: #5d737e;
+    --sub-section-background: #30292f;
+    --sub-section-link-background: #02111b;
+    --sub-section-link-border: #3f4045;
+}
+
+body {
+    min-width: 700px;
+    background-color: var(--main-background);
+}
+  
+#navbar {
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 700px;
+    height: 10%;
+    padding-right: 5%;
+    background-color: var(--navbar-background);
+    z-index: 2;
+}
+  
+#contacts {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    padding: 0 32px;
+    font-size: 64px;
+    z-index: 3;
+}
+  
+#contacts > a >.fa {
+    color: var(--text-color);
+    transition: 0.2s ease-in;
+}
+  
+#contacts > a > .fa:hover {
+    color: var(--active-text-color);
+}
+
+a {
+    text-decoration: none;
+}
+  
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    padding: 0 16px;
+    color: var(--text-color);
+    font-size: 32px;
+    transition: 0.2s ease-in;
+}
+  
+.nav-link:hover {
+    color: var(--active-text-color);
+    cursor: pointer;
+}
+  
+#about-section, #technologies-section, #projects-section {
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 112px;
+    padding: 32px;
+    background-color: var(--sub-section-background);
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 24px;
+    line-height: 48px;
+    scroll-margin-top: 112px;
+}
+
+#cv-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 284px;
+    height: 48px;
+    padding: 0 16px;
+    background-color: var(--sub-section-link-background);
+    border: 4px solid var(--sub-section-link-border);
+    color: var(--text-color);
+    font-size: 32px;
+    transition: 0.2s;
+}
+
+#cv-link:hover {
+    border: 2px solid var(--sub-section-link-border);
+    color: var(--active-text-color);
+}
+
+#technologies-section, #projects-section {
+    text-align: center;
+}
+
+#technologies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.technology {
+    width: 240px;
+    background-color: var(--sub-section-link-background);
+    border: 4px solid var(--sub-section-link-border);
+}
+
+.project {
+    display: flex;
+    width: 90%;
+    background-color: var(--main-background);
+    margin: 48px calc(10% - 32px);
+    padding: 16px;
+    border-radius: 15px;
+}
+
+.project-links, .project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 50%;
+}
+
+.project-img-link {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    background-color: var(--sub-section-link-background);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--sub-section-link-background);
+    transition: 0.5s ;
+}
+
+.project-img:hover {
+    transform:translate(-20px, -20px);
+}
+
+.github-link {
+    width: 90%;
+    background-color: var(--sub-section-background);
+    color: var(--text-color);
+    font-size: 32px;
+    transition: 0.2s ease-in;
+}
+
+.github-link:hover {
+    color: var(--active-text-color);
+    cursor: pointer;
+}
+
+.project-description {
+    justify-content: center;
+    padding: 0 32px;
+}
+
+.project-description > a {
+    font-size: 48px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+
+.project-description > a:hover {
+    color: var(--active-text-color);
+    cursor: pointer;
+}
+
+#pokeapi-link {
+    color: var(--active-text-color);
+    transition: 0.2s;
+}
+
+#pokeapi-link:hover {
+    color: var(--text-color);
+}
+
+@media (max-width: 1000px) {
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    #about-section, #technologies-section, #projects-section {
+        font-size: 16px;
+    }
+
+    .technology {
+        width: 160px;
+    }
+
+    .github-link {
+        font-size: 24px;
+    }
+
+    .project-description > a {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-link {
+        display: none;
+    }
+}
